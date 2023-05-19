@@ -1,5 +1,4 @@
 class Nutritionists::RegistrationsController < Devise::RegistrationsController
-
   respond_to :json
 
   private
@@ -15,6 +14,6 @@ class Nutritionists::RegistrationsController < Devise::RegistrationsController
   end
 
   def register_failed
-    render json: { message: "Something went wrong." }
+    render json: { message: 'Something went wrong.' }
   end
 end

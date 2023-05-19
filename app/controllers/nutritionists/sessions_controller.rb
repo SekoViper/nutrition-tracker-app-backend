@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Nutritionists::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
@@ -7,7 +5,7 @@ class Nutritionists::SessionsController < Devise::SessionsController
 
   private
 
-  def respond_with(resource, _opts = {})
+  def respond_with(_resource, _opts = {})
     render json: { message: 'You are logged in.' }, status: :ok
   end
 
@@ -18,10 +16,10 @@ class Nutritionists::SessionsController < Devise::SessionsController
   end
 
   def log_out_success
-    render json: { message: "You are logged out." }, status: :ok
+    render json: { message: 'You are logged out.' }, status: :ok
   end
 
   def log_out_failure
-    render json: { message: "Hmm nothing happened."}, status: :unauthorized
+    render json: { message: 'Hmm nothing happened.' }, status: :unauthorized
   end
 end
